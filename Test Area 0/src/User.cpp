@@ -6,13 +6,22 @@
  */
 
 #include "User.h"
+#include <iostream>
 
-User::User() {
-	// TODO Auto-generated constructor stub
-
+User::User(int size, int value):m_size(size),m_value(value),pValue(new int [m_size] {0}){
+	for(int i=0; i<m_size; i++){
+			pValue[i] = m_value;
+		}
 }
 
 User::~User() {
-	// TODO Auto-generated destructor stub
+	std::cout << "User object destroyed" << std::endl;
 }
+
+void User::print(){
+	for(int i=0; i<m_size; i++){
+		std::cout << pValue[i] << std::endl;
+	}
+}
+
 

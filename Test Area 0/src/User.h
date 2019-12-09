@@ -12,12 +12,16 @@
 
 class User {
 private:
-	std::unique_ptr<int> *pValue();
-
+	int m_size;
+	int m_value;
+	std::unique_ptr<int []> pValue;
 
 public:
-	User();
+	User(int size, int value);
 	virtual ~User();
+
+	void print();
+
 };
 
 #endif /* USER_H_ */
