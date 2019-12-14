@@ -9,8 +9,9 @@
 #include <iostream>
 
 User::User(int size, int value):m_size(size),m_value(value),pValue(new int [m_size] {0}){
+
 	for(int i=0; i<m_size; i++){
-			pValue[i] = m_value;
+			pValue[i] = m_value+i;
 		}
 }
 

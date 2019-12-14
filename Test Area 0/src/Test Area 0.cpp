@@ -12,7 +12,7 @@ using namespace std;
 
 int main() {
 
-	User u1(5, 13);
+	User u1(10, 0);
 	u1.print();
 
 	return 0;
