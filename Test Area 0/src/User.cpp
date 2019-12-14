@@ -8,6 +8,16 @@
 #include "User.h"
 #include <iostream>
 
+User::User(){
+
+}
+
+User::User(const User& other){
+	m_size = other.m_size;
+	m_value = other.m_value;
+	pValue = std::unique_ptr<int []>{0};
+}
+
 User::User(int size, int value):m_size(size),m_value(value),pValue(new int [m_size] {0}){
 
 	for(int i=0; i<m_size; i++){

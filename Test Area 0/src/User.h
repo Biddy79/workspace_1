@@ -17,6 +17,8 @@ private:
 	std::unique_ptr<int []> pValue;
 
 public:
+	User();
+	User(const User& other);
 	User(int size, int value);
 	virtual ~User();
 
