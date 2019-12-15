@@ -18,6 +18,16 @@ User::User(const User& other){
 	pValue = std::unique_ptr<int []>{0};
 }
 
+const User& User::operator=(const User& rhs){
+	std::cout << "assignment operator running " << std::endl;
+
+	m_size = rhs.m_size;
+	m_value = rhs.m_value;
+
+
+	return *this;
+}
+
 User::User(int size, int value):m_size(size),m_value(value),pValue(new int [m_size] {0}){
 
 	for(int i=0; i<m_size; i++){

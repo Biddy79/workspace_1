@@ -20,6 +20,8 @@ public:
 	User();
 	User(const User& other);
 	User(int size, int value);
+
+	const User& operator=(const User& rhs);
 	virtual ~User();
 
 	void print();
