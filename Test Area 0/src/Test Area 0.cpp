@@ -12,50 +12,6 @@ using namespace std;
 
 int main() {
 
-	//Create object u1
-	User u1(10, 0);
-	u1.print();
-
-	cout << "===============" << endl;
-
-	//Create object on heap with unique ptr also using copy constructor of User class passing u1
-	unique_ptr<User> u2(new User(u1));
-	u1.print();
-
-	cout << "===============" << endl;
-
-	// Can Create and array of User using on heap using unique_ptr
-	// but can not use constructor with parameters like (u1) copy constructor
-	// unique_ptr<User []> u3(new User[3](u1));
-	unique_ptr<User []> u3(new User[3]);
-	u3[0].print();
-
-
-	//Creating object u4 and printing
-	User u4(5, 20);
-	u4.print();
-
-	cout << "===============" << endl;
-
-	//creating object u5  setting = to u4 then printing
-	User u5(2,30);
-
-	//setting = to u4 then printing
-	//pValue unique_ptr [] u4 as 5 elements in array
-	//this leads to the 2 eliments in unique_ptr [] being set in the constructor of u5 above
-	// but the 3 remaning eliments will be set to 0
-	u5 = u4;
-	u5.print();
-
-	cout << "===============" << endl;
-
-
-
-
-
-
-
-
 
 	return 0;
 }
