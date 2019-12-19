@@ -12,16 +12,17 @@
 
 class User {
 private:
-	const int SIZE = 10;
+
 	int m_size;
 	//Needed shared_ptr not unique_ptr for overloaded operator=()
 	std::shared_ptr<int []> pValue;
 
 
 public:
-	User();
+	User(int size);
 	virtual ~User();
 
+	User(const User& other);
 	const User& operator=(const User& rhs);
 
 	void calculate();

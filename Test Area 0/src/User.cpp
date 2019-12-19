@@ -8,7 +8,7 @@
 #include <iostream>
 
 
-User::User():pValue(new int [SIZE]{0}){
+User::User(int size):m_size(size), pValue(new int [m_size]{0}) {
 
 }
 
@@ -16,6 +16,10 @@ User::~User() {
 	std::cout << "Destructor" << std::endl;
 }
 
+User::User(const User& other){
+	m_size = other.m_size;
+	pValue = other.pValue;
+}
 
 const User& User::operator=(const User& rhs){
 
@@ -30,7 +34,7 @@ const User& User::operator=(const User& rhs){
 void User::calculate(){
 
 	int num = 1;
-	for(int i=0; i<SIZE; i++){
+	for(int i=0; i<m_size; i++){
 		 pValue[i] = num++;
 		 std::cout << pValue[i] << ", " << std::flush;
 
