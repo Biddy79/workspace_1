@@ -38,19 +38,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: Test\ Area\ 0
+all: sheard_ptr\ as\ Class\ variabels
 
 # Tool invocations
-Test\ Area\ 0: $(OBJS) $(USER_OBJS)
+sheard_ptr\ as\ Class\ variabels: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "Test Area 0" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "sheard_ptr as Class variabels" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) "Test Area 0"
+	-$(RM) $(CC_DEPS)$(C++_DEPS)$(EXECUTABLES)$(C_UPPER_DEPS)$(CXX_DEPS)$(OBJS)$(CPP_DEPS)$(C_DEPS) "sheard_ptr as Class variabels"
 	-@echo ' '
 
 .PHONY: all clean dependents

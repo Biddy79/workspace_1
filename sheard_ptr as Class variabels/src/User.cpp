@@ -39,6 +39,5 @@ void User::calculate(){
 		 std::cout << pValue[i] << ", " << std::flush;
 
 	}
-
 }
 
