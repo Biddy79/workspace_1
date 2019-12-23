@@ -11,21 +11,34 @@
 template<class T>
 class Ruse{
 private:
-	//tempalte obj variabel
-	T obj;
+	T m_val1;
+	T m_val2;
 
 public:
-	//Ruse constructor takes tamplate type and then sets the object passed in equeal to templte T
-	//
-	Ruse(T obj){
-		this->obj = obj;
+
+	Ruse(T val1, T val2){
+		this->m_val1 = val1;
+		this->m_val2 = val2;
 	}
 
-	//getObj returns a template type T
-	T getObj(){
-		return obj;
+	T sum(){
+		T val3 = m_val1 + m_val2;
+
+		return val3;
 	}
+
+	T addMore();
+
 };
+
+
+template<typename T>
+T Ruse<T>::addMore(){
+	return m_val1 + m_val2 + 30;
+
+}
+
+
 
 
 

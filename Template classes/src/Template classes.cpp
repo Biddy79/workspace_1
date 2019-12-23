@@ -13,13 +13,13 @@ using namespace std;
 
 int main() {
 
-	//User object crreated using template class Ruse
-	Ruse<User> u1(5);
+	Ruse<double> rs1(5.5, 10);
+	Ruse<int> rs2(5.5, 10);
 
-	//accessing u1.print() functions by calling getObj() in Ruse template class
-	u1.getObj().print();
+	cout << rs1.sum() << endl;
+	cout << rs2.sum() << endl;
 
-
+	cout << rs2.addMore() << endl;
 
 	return 0;
-}
+};

@@ -10,11 +10,13 @@
 
 class User {
 private:
-	int m_num;
+	int m_num1;
+	int m_num2;
 
 public:
 	User();
-	User(int num);
+	User(int num1, int num2);
+	User(const User& other);
 	virtual ~User();
 
 	void print();
