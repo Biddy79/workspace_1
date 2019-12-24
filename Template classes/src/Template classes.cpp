@@ -11,6 +11,14 @@
 #include "User.h"
 using namespace std;
 
+//function declaried in Ruse.h
+template<typename T>
+T Ruse<T>::addMore(){
+	User u1(4,4);
+	return 4.3 + u1.sum();
+}
+
+
 int main() {
 
 	Ruse<double> rs1(5.5, 10);
@@ -20,6 +28,8 @@ int main() {
 	cout << rs2.sum() << endl;
 
 	cout << rs2.addMore() << endl;
+
+
 
 	return 0;
 };

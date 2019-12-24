@@ -20,6 +20,7 @@ public:
 	virtual ~User();
 
 	void print();
+	int sum();
 };
 
 #endif /* USER_H_ */

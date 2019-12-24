@@ -27,16 +27,10 @@ public:
 		return val3;
 	}
 
+	//function found in above main
 	T addMore();
 
 };
-
-
-template<typename T>
-T Ruse<T>::addMore(){
-	return m_val1 + m_val2 + 30;
-
-}
 
 
 

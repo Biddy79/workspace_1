@@ -29,3 +29,7 @@ User::~User() {
 void User::print(){
 	std::cout << m_num1 << ", " << m_num2 << std::endl;
 }
+
+int User::sum(){
+	return m_num1 + m_num2;
+}
