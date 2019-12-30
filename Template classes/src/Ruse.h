@@ -8,33 +8,28 @@
 #ifndef RUSE_H_
 #define RUSE_H_
 
+#include <iostream>
+
 template<class T>
-class Ruse{
+class Ruse {
 private:
+
 	T m_val1;
 	T m_val2;
 
 public:
 
-	Ruse(T val1, T val2){
-		this->m_val1 = val1;
-		this->m_val2 = val2;
+	T add(T m_val1, T m_val2) {
+		T total;
+		total = m_val1 + m_val2;
+
+		std::cout << total << std::endl;
+
+		return total;
 	}
 
-	T sum(){
-		T val3 = m_val1 + m_val2;
 
-		return val3;
-	}
-
-	//function found in above main
-	T addMore();
 
 };
-
-
-
-
-
 
 #endif /* RUSE_H_ */

@@ -8,28 +8,27 @@
 
 #include <iostream>
 #include "Ruse.h"
-#include "User.h"
+
+class User{
+private:
+	int num;
+
+public:
+	User();
+
+};
+
 using namespace std;
-
-//function declaried in Ruse.h
-template<typename T>
-T Ruse<T>::addMore(){
-	User u1(4,4);
-	return 4.3 + u1.sum();
-}
-
 
 int main() {
 
-	Ruse<double> rs1(5.5, 10);
-	Ruse<int> rs2(5.5, 10);
+	Ruse<int> useInt;
+	useInt.add(10, 10);
 
-	cout << rs1.sum() << endl;
-	cout << rs2.sum() << endl;
+	Ruse<double> useDouble;
+	useDouble.add(4.5, 3.7);
 
-	cout << rs2.addMore() << endl;
-
-
+	Ruse<double> newObj();
 
 	return 0;
 };
