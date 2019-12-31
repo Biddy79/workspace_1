@@ -9,16 +9,23 @@
 #include <iostream>
 #include "Ruse.h"
 
-class User{
-private:
-	int num;
-
-public:
-	User();
-
-};
-
 using namespace std;
+
+//constructor declaration found in Ruse.h
+template<class T>
+Ruse<T>::Ruse(){
+
+}
+//constructor declaration found in Ruse.h
+template<class T>
+Ruse<T>::Ruse(T obj){
+	this->m_obj = obj;
+}
+//function declaration found in Ruse.h
+template<class T >
+void Ruse<T>::print(){
+	std::cout << m_obj << std::endl;
+}
 
 int main() {
 
@@ -28,7 +35,15 @@ int main() {
 	Ruse<double> useDouble;
 	useDouble.add(4.5, 3.7);
 
-	Ruse<double> newObj();
+	Ruse<string> useString("Hello");
+	useString.print();
+
+	Ruse<char> useChar('a');
+	useChar.print();
+
+
+
+
 
 	return 0;
 };
