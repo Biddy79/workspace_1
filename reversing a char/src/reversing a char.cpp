@@ -15,15 +15,29 @@ using namespace std;
 
 int main() {
 
-	char word[] = "RADAR";
+	char word[] = "Hello";
 
 	int nChars = sizeof(word)-1;
 
 	char *pStart = word;
 	char *pEnd = word + nChars-1;
 
-
+	cout << *pStart << endl;
 	cout << *pEnd << endl;
+
+	while(pStart < pEnd){
+
+		char save = *pStart;
+	    *pStart = *pEnd;
+	    *pEnd = save;
+
+		pStart++;
+		pEnd--;
+
+	}
+
+	cout << word << endl;
+
 
 
 
