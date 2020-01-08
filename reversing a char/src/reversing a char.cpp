@@ -15,7 +15,35 @@ using namespace std;
 
 int main() {
 
-	char word[] = "Hello";
+
+
+	char word[] {"Hello"};
+
+	char *pStart = &word[0];
+	cout << *pStart << endl;
+
+	cout << "Number of elements in array:" << sizeof(word) << endl;
+
+	char *pEnd = &word[sizeof(word) -2];
+	cout << *pEnd << endl;
+
+	while(pStart < pEnd){
+
+		char save = *pEnd;
+		*pEnd = *pStart;
+		*pStart = save;
+
+		pEnd--;
+		pStart++;
+
+
+	}
+
+	cout << word << endl;
+
+
+
+	/*char word[] = "Hello";
 
 	int nChars = sizeof(word)-1;
 
@@ -36,7 +64,7 @@ int main() {
 
 	}
 
-	cout << word << endl;
+	cout << word << endl;*/
 
 
 
