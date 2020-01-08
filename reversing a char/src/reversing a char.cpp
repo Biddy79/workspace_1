@@ -15,17 +15,20 @@ using namespace std;
 
 int main() {
 
-
+cout << "////////////////////////Reversing a char///////////////////////////////////////" << endl;
 
 	char word[] {"Hello"};
 
+	//char pointer pointing to address of word at index 0
 	char *pStart = &word[0];
-	cout << *pStart << endl;
+	//if needing to  access address of *pStart  use    &pStart
+	cout << &pStart << endl;
 
 	cout << "Number of elements in array:" << sizeof(word) << endl;
 
 	char *pEnd = &word[sizeof(word) -2];
-	cout << *pEnd << endl;
+	cout << &pEnd << endl;
+
 
 	while(pStart < pEnd){
 
@@ -42,6 +45,7 @@ int main() {
 	cout << word << endl;
 
 
+////////////////////Alternate way to do the same as above/////////////////////////
 
 	/*char word[] = "Hello";
 
@@ -65,6 +69,21 @@ int main() {
 	}
 
 	cout << word << endl;*/
+
+
+cout << "//////////////////////////reversing with vectors//////////////////////////////" << endl;
+
+	vector<string> text{"five", "four", "three", "two", "one"};
+
+	string *pVecStart = &text[0];
+	cout << *pVecStart << endl;
+
+	// can also be done using iterator and incrementing to move up the vector
+
+	/*vector<string>::iterator pVecStart = text.begin() +1;
+	cout << *pVecStart << endl;
+    */
+
 
 
 
