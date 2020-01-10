@@ -21,7 +21,7 @@ cout << "////////////////////////Reversing a char///////////////////////////////
 
 	//char pointer pointing to address of word at index 0
 	char *pStart = &word[0];
-	//if needing to  access address of *pStart  use    &pStart
+	//if needing to  access address of *pStart  use &pStart
 	cout << &pStart << endl;
 
 	cout << "Number of elements in array:" << sizeof(word) << endl;
@@ -84,7 +84,24 @@ cout << "//////////////////////////reversing with vectors///////////////////////
 	cout << *pVecStart << endl;
     */
 
+	vector<string>::iterator itEnd = text.end() -1;
+	cout << *itEnd << endl;
 
+	//Note &*itEnd will give the address of iterator
+	while(pVecStart < &*itEnd){
+
+		string save = *pVecStart;
+		*pVecStart = *itEnd;
+		*itEnd = save;
+
+		pVecStart++;
+		&*itEnd--;
+
+	}
+
+   for(auto texts: text){
+	   cout << texts << ", " << flush;
+   }
 
 
 
